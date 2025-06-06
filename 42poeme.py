@@ -39,7 +39,7 @@ def print_error(error, line = -1):
     global valid
     # print the error red !!
     if line != -1:
-        print(f"\033[91mErreur: {error}, ligne {line + 1}\033[0m")
+        print(f"\033[91mErreur: {error}, vers {line + 1}\033[0m")
     else:
         print(f"\033[91mErreur: {error}\033[0m")
     valid = False
@@ -61,14 +61,14 @@ try:
         
         if word_count == 0:
             if len(words) != 7 and len(words) != 6:
-                print_error(f"Les lignes doivent contenir exclusivement 7 mots ou exclusivement 6 mots, actuellement : {len(words)} mots", lcount)
+                print_error(f"Les vers doivent contenir exclusivement 7 mots ou exclusivement 6 mots, actuellement : {len(words)} mots", lcount)
             else:
                 word_count = len(words)
         elif len(words) != word_count:
-            print_error(f"Les lignes doivent contenir {word_count} mots, actuellement : {len(words)}", lcount)
+            print_error(f"Les vers doivent contenir {word_count} mots, actuellement : {len(words)}", lcount)
             
         if len(line) != 42:
-            print_error("Chaque ligne doit contenir exactement 42 caractères", lcount)
+            print_error("Chaque vers doit contenir exactement 42 caractères", lcount)
 
         lcount += 1
     
@@ -76,7 +76,7 @@ try:
         print_error("Le poème n'est pas valide")
         exit(1)
     if (lcount != 6 and word_count == 7) or (lcount != 7 and word_count == 6) or lcount < 6 or lcount > 7:
-        print_error("Le poème doit contenir 6 lignes de 7 mots ou 7 lignes de 6 mots", lcount)
+        print_error("Le poème doit contenir 6 vers de 7 mots ou 7 vers de 6 mots", lcount)
         exit(1)
     print("\033[92mPoème valide !\033[0m")
     print(f"\033[92m{random.choice(compliments)}\033[0m")
