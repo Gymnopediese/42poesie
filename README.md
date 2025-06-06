@@ -33,7 +33,7 @@ Exemples 7 vers:
 
 ## Objectif
 
-Faire un recueil contenant 42 des meuilleurs poème écrit par vos soins !
+Faire un recueil contenant 42 des meilleurs poème écrit par vos soins !
 
 ## Utilisation
 
