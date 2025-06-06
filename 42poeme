@@ -1,0 +1,37 @@
+#!/bin/bash
+
+FILE=$1
+
+if [ ! -f "$FILE" ]; then
+  echo "Fichier non trouvé !"
+  exit 1
+fi
+
+done=1
+line_num=0
+
+while IFS= read -r line; do
+  line_num=$((line_num+1))
+  
+  # Vérification du nombre de caractères
+  length=${#line}
+  if [ "$length" -ne 42 ]; then
+    echo "La ligne $line_num ne fait pas 42 caractères (elle en fait $length)"
+    done=0
+  fi
+
+  # Vérification du nombre de mots
+  IFS=$' \t' read -ra words <<< "$line"
+  word_count=${#words[@]}
+  if [ "$word_count" -ne 7 ]; then
+    echo "La ligne $line_num ne contient pas 7 mots (elle en contient $word_count)"
+    done=0
+  fi
+done < "$FILE"
+
+if [ $done -eq 0 ]; then
+  echo "Validation échouée."
+  exit 1
+fi
+
+echo "Validation réussie ! Chaque ligne contient exactement 7 mots et 42 caractères pour un total de 42 mots, vous êtes un véritable poète !"
