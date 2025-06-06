@@ -20,7 +20,7 @@ Un **42 poème** suit l'une des deux structures suivantes :
 1. Clone le repo :
 
    ```bash
-   git clone https://github.com/<ton-nom>/42-poeme.git
+   git clone [https://github.com/<ton-nom>/42-poeme.git](https://github.com/Gymnopediese/42poesie.git)
    ```
 
 2. Place ton poème dans un fichier `.42p`.
