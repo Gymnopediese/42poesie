@@ -17,14 +17,14 @@ Un **42 poème** suit l'une des deux structures suivantes :
 
 Pour finir, il faut faire rimé les vers avec le paterne de votre choix :
 
-exemples 6 vers:
+Exemples avec 6 vers:
 - a,a,a,b,b,b
 - a,a,b,b,c,c
 - a,b,a,b,c,c
 - a,a,a,a,a,a
 - ...
 
-exemples 7 vers:
+Exemples 7 vers:
 - a,a,a,b,b,b,b
 - a,a,a,a,b,b,b
 - a,a,b,b,c,c,c
