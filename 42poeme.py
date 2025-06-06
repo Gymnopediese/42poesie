@@ -46,6 +46,11 @@ def print_error(error, line = -1):
 
 
 try:
+    
+    if file_path.endswith('.42p') is False:
+        print_error("Le fichier doit avoir l'extension .42p")
+        exit(1)
+    
     with open(file_path, 'r') as file:
         lines = file.read().splitlines()
     
