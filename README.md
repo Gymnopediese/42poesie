@@ -6,14 +6,34 @@ Un petit programme qui vérifie si un poème respecte les règles d'un **42 poè
 
 Un **42 poème** suit l'une des deux structures suivantes :
 
-* **6 lignes**, **7 mots par ligne**
-* **7 lignes**, **6 mots par ligne**
+* **6 vers**, **7 mots par vers**
+* **7 vers**, **6 mots par vers**
 
-**ET** chaque ligne doit faire **exactement 42 caractères**, espaces inclus.
+**ET** chaque vers doit faire **exactement 42 caractères**, espaces inclus.
 
 👉 Les mots sont comptés à la manière de la commande Unix `wc -w` :
 
 > Par exemple, `"j'arrive"` compte comme **un seul mot**, pas deux.
+
+Pour finir, il faut faire rimé les vers avec le paterne de votre choix :
+
+Exemples avec 6 vers:
+- a,a,a,b,b,b
+- a,a,b,b,c,c
+- a,b,a,b,c,c
+- a,a,a,a,a,a
+- ...
+
+Exemples 7 vers:
+- a,a,a,b,b,b,b
+- a,a,a,a,b,b,b
+- a,a,b,b,c,c,c
+- ...
+
+
+## Objectif
+
+Faire un recueil contenant 42 des meilleurs poème écrit par vos soins !
 
 ## Utilisation
 
