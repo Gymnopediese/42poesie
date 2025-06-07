@@ -65,7 +65,7 @@ try:
             else:
                 word_count = len(words)
         elif len(words) != word_count:
-            print_error(f"Les vers doivent contenir {word_count} mots, actuellement : {len(words)}", lcount)
+            print_error(f"Tous les vers doivent contenir le même nombre de mots, vous avez choisi {word_count} mots, actuellement : {len(words)} mots", lcount)
             
         if len(line) != 42:
             print_error("Chaque vers doit contenir exactement 42 caractères, actuellement : " + str(len(line)), lcount)
