@@ -68,7 +68,7 @@ try:
             print_error(f"Les vers doivent contenir {word_count} mots, actuellement : {len(words)}", lcount)
             
         if len(line) != 42:
-            print_error("Chaque vers doit contenir exactement 42 caractères", lcount)
+            print_error("Chaque vers doit contenir exactement 42 caractères, actuellement : " + str(len(line)), lcount)
 
         lcount += 1
     
@@ -76,7 +76,7 @@ try:
         print_error("Le poème n'est pas valide")
         exit(1)
     if (lcount != 6 and word_count == 7) or (lcount != 7 and word_count == 6) or lcount < 6 or lcount > 7:
-        print_error("Le poème doit contenir 6 vers de 7 mots ou 7 vers de 6 mots", lcount)
+        print_error("Le poème doit contenir 6 vers de 7 mots ou 7 vers de 6 mots, actuellement : " + str(lcount) + " vers")
         exit(1)
     print("\033[92mPoème valide !\033[0m")
     print(f"\033[92m{random.choice(compliments)}\033[0m")
